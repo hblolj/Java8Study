@@ -26,12 +26,12 @@ public class FunctionalInterfaceDemo {
      */
     @Test
     public void testConsumer(){
-//        Consumer<String> consumer = new Consumer<String>() {
-//            @Override
-//            public void accept(String s) {
-//                System.out.println(s);
-//            }
-//        };
+        Consumer<String> consumer1 = new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                System.out.println(s);
+            }
+        };
         Consumer<String> consumer = s -> System.out.println(s);
         consumer.accept("hblolj");
     }
@@ -42,12 +42,12 @@ public class FunctionalInterfaceDemo {
      */
     @Test
     public void testSupplier(){
-//        Supplier<String> supplier = new Supplier<String>() {
-//            @Override
-//            public String get() {
-//                return "hblolj";
-//            }
-//        };
+        Supplier<String> supplier1 = new Supplier<String>() {
+            @Override
+            public String get() {
+                return "hblolj";
+            }
+        };
         Supplier<String> supplier = () -> "hblolj";
         System.out.println(supplier.get());
     }
@@ -58,12 +58,12 @@ public class FunctionalInterfaceDemo {
      */
     @Test
     public void testFunction(){
-//        Function<String ,String> function = new Function<String, String>() {
-//            @Override
-//            public String apply(String s) {
-//                return s.toUpperCase();
-//            }
-//        };
+        Function<String ,String> function1 = new Function<String, String>() {
+            @Override
+            public String apply(String s) {
+                return s.toUpperCase();
+            }
+        };
         Function<String ,String> function = s -> s.toUpperCase();
         System.out.println(function.apply("hblolj"));
     }
@@ -74,13 +74,13 @@ public class FunctionalInterfaceDemo {
      */
     @Test
     public void testPredicate(){
-//        Predicate<String> predicate = new Predicate<String>() {
-//            @Override
-//            public boolean test(String s) {
-//                return "hblolj".equals(s);
-//            }
-//        };
-        Predicate<String> predicate = s -> "hblolj".equals(s);
-        System.out.println(predicate.test("hblolj"));
+        Predicate<String> predicate1 = new Predicate<String>() {
+            @Override
+            public boolean test(String s) {
+                return "hblolj".equals(s);
+            }
+        };
+        Predicate<String> predicate2 = s -> "hblolj".equals(s);
+        System.out.println(predicate2.test("hblolj"));
     }
 }
